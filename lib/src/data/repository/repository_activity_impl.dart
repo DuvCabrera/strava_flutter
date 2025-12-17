@@ -59,8 +59,8 @@ class RepositoryActivityImpl extends RepositoryActivity {
   Future<List<SummaryActivity>> listLoggedInAthleteActivities(
       DateTime before, DateTime after, int page, int perPage) {
     var queryParams = {
-      "before": before.millisecondsSinceEpoch / 1000,
-      "after": after.millisecondsSinceEpoch / 1000,
+      "before": before.millisecondsSinceEpoch ~/ 1000,
+      "after": after.millisecondsSinceEpoch ~/ 1000,
       "page": page,
       "per_page": perPage
     };

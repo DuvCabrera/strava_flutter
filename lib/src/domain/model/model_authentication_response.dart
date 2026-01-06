@@ -66,7 +66,7 @@ class TokenResponse {
 
 class Athlete {
   int id;
-  Athlete(required this.id);
+  Athlete({required this.id});
 
   factory Athlete.fromRawJson(String str) => Athlete.fromJson(json.decode(str));
 

@@ -65,13 +65,14 @@ class TokenResponse {
 }
 
 class Athlete {
-  Athlete();
+  int id;
+  Athlete(required this.id);
 
   factory Athlete.fromRawJson(String str) => Athlete.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory Athlete.fromJson(Map<String, dynamic> json) => Athlete();
+  factory Athlete.fromJson(Map<String, dynamic> json) => Athlete(id:json["id"]);
 
   Map<String, dynamic> toJson() => {};
 }

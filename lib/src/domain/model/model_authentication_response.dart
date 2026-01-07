@@ -74,5 +74,5 @@ class Athlete {
 
   factory Athlete.fromJson(Map<String, dynamic> json) => Athlete(id:json["id"]);
 
-  Map<String, dynamic> toJson() => {};
+  Map<String, dynamic> toJson() => {"id":id};
 }
